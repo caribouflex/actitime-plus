@@ -1,5 +1,5 @@
-// Add a listener so background knows when a tab has changed.
-// You need 'tabs' persmission, that's why we added it to manifest file.
+//Global
+
 chrome.tabs.onUpdated.addListener(showIntercomAction);
 
 
