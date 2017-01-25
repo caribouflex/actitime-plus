@@ -1,0 +1,36 @@
+{
+	"manifest_version": 2,
+	"name": "ActiTime week copy",
+	"description": "This extension is used to copy the value from the last week or a specific week(time and comments), to the current week.",
+	"version": "1.1",
+	
+	"background": {
+		"scripts": ["background.js"]
+	},
+   
+	"icons": { 
+		"16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png" 
+	},
+   
+	"page_action": {
+		"default_icon": {      
+            "19": "icon.png"
+        },
+		"default_popup": "popup.html"
+	},
+	
+	"permissions" : [
+		"tabs", "http://actitime.distech-controls.com/*"
+	],
+  
+	"content_scripts": [ {
+        "all_frames": true,
+        "js": [ "jquery-1.11.2.min.js"],
+		"matches": [ "http://*/*", "https://*/*" ] 
+	} ],
+  
+	"author": "Arthur TRESSOL"
+  
+}
